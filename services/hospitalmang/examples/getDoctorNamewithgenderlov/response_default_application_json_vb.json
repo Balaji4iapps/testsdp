@@ -1,0 +1,29 @@
+{
+    "items": [
+        {
+            "doc_code": 1314,
+            "doc_name": "doc",
+            "doc_gender": "M",
+            "doc_address": "new123",
+            "doc_designation": "newdoc",
+            "doc_number": null,
+            "doc_fees": null,
+            "medical_fees": null,
+            "total_fees": null
+        }
+    ],
+    "hasMore": false,
+    "limit": 0,
+    "offset": 0,
+    "count": 1,
+    "links": [
+        {
+            "rel": "self",
+            "href": "https://gd4d01c5ed5180a-dyrdbtestadw.adb.me-dubai-1.oraclecloudapps.com/ords/dyrords/1310/doctor/namewithgenderlov?P_DOC_NAME=doc"
+        },
+        {
+            "rel": "describedby",
+            "href": "https://gd4d01c5ed5180a-dyrdbtestadw.adb.me-dubai-1.oraclecloudapps.com/ords/dyrords/metadata-catalog/1310/doctor/item"
+        }
+    ]
+}

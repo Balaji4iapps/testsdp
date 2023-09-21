@@ -1,0 +1,81 @@
+{
+  "title": "",
+  "description": "",
+  "variables": {
+    "employeeListSDP": {
+      "type": "vb/ServiceDataProvider",
+      "defaultValue": {
+        "endpoint": "businessObjects/getall_Employee",
+        "keyAttributes": "id",
+        "itemsPath": "items",
+        "responseType": "getallEmployeeResponse"
+      }
+    },
+    "oj_table_1910290557_1SelectedId": {
+      "type": "string",
+      "defaultValue": ""
+    }
+  },
+  "metadata": {},
+  "types": {
+    "@decorators.getallEmployeeResponse": {
+      "endpoint": "getall_Employee",
+      "service": "businessObjects",
+      "path": "response"
+    },
+    "getallEmployeeResponse": {
+      "items": [
+        {
+          "department": "number",
+          "email": "string",
+          "firstName": "string",
+          "id": "number",
+          "job": "number",
+          "salary": "number"
+        }
+      ]
+    }
+  },
+  "eventListeners": {
+    "createEmployeeButtonClicked": {
+      "chains": [
+        {
+          "chain": "navigateToCreateEmployeeChain"
+        }
+      ]
+    },
+    "editEmployeeButtonClicked": {
+      "chains": [
+        {
+          "chain": "navigateToEditEmployeeChain",
+          "parameters": {
+            "employeeId": "[[ $variables.oj_table_1910290557_1SelectedId ]]"
+          }
+        }
+      ]
+    },
+    "oj_table_1910290557_1SelectionChanged": {
+      "chains": [
+        {
+          "chain": "ojTable19102905571ChangeSelectionChain",
+          "parameters": {
+            "employeeId": "[[ $event.detail.value.key || '' ]]"
+          }
+        }
+      ]
+    }
+  },
+  "imports": {
+    "components": {
+      "oj-button": {
+        "path": "ojs/ojbutton"
+      },
+      "oj-table": {
+        "path": "ojs/ojtable"
+      },
+      "oj-toolbar": {
+        "path": "ojs/ojtoolbar"
+      }
+    }
+  }
+}

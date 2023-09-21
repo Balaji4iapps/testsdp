@@ -1,0 +1,34 @@
+<div>
+  <!-- <oj-combobox-one label-hint="Name" value="{{ $variables.Name }}" options="[[ $variables.Doc_name_sdp ]]"
+   options-keys.value="doc_name" required="true" ></oj-combobox-one> -->
+  <oj-select-single label-hint="Name" value="{{ $variables.Name }}" item-text="doc_name"
+    data="[[$variables.getDoctorDocnamelovListSDP]]" on-value-item-changed="[[$listeners.selectValueItem]]"></oj-select-single>
+
+  <!-- <oj-combobox-one label-hint="Gender" value="{{ $variables.gender }}" options="[[ $variables.doc_Gen_sdp ]]"
+   options-keys.value="doc_gender" required="true" ></oj-combobox-one> -->
+
+  <oj-select-single label-hint="Gender" value="{{ $variables.gender }}" item-text="doc_gender"
+    data="[[$variables.getDoctorNamewithgenderlovListSDP]]"></oj-select-single>
+  
+</div>
+<br>
+<!-- <div>
+<oj-combobox-one label-hint="Combo Doc Name" options="[[$variables.getDoctorDocnamelovListSDP2]]"
+    options-keys.value="doc_name" options-keys.label="doc_name" value="{{ $variables.Name }}"
+    on-value-changed="[[$listeners.comboValue]]"></oj-combobox-one>
+  
+  <oj-combobox-one label-hint="Combo (gender)" options="[[$variables.getDoctorNamewithgenderlovListSDP2]]"
+    options-keys.value="doc_gender" options-keys.label="doc_gender"></oj-combobox-one>
+</div> -->
+
+<br>
+<!-- <oj-combobox-many label-hint="Combobox (Many)"></oj-combobox-many> -->
+<!-- <div>
+<oj-combobox-many label-hint="Combo Doc Name" options="[[$variables.getDoctorDocnamelovListSDP2]]"
+    options-keys.value="doc_name" options-keys.label="doc_name" value="{{ $variables.Name }}"
+    on-value-changed="[[$listeners.comboValue]]"></oj-combobox-many>
+  
+  <oj-combobox-many label-hint="Combo (gender)" options="[[$variables.getDoctorNamewithgenderlovListSDP2]]"
+    options-keys.value="doc_gender" options-keys.label="doc_gender"></oj-combobox-many>
+</div> -->
+

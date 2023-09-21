@@ -1,0 +1,901 @@
+{
+  "title": "main",
+  "description": "",
+  "variables": {
+    "lov": {
+      "type": "vb/ServiceDataProvider",
+      "defaultValue": {
+        "endpoint": "businessObjects/getall_Employee",
+        "responseType": "getall_Employee2",
+        "itemsPath": "items",
+        "keyAttributes": "firstName",
+        "transformsContext": {
+          "vb-textFilterAttributes": [
+            "firstName"
+          ]
+        }
+      }
+    }
+  },
+  "metadata": {},
+  "types": {
+    "@decorators.getall_Employee": {
+      "endpoint": "getall_Employee",
+      "service": "businessObjects",
+      "path": "response"
+    },
+    "@decorators.getall_Employee2": {
+      "endpoint": "getall_Employee",
+      "service": "businessObjects",
+      "path": "response"
+    },
+    "getall_Employee": {
+      "items": [
+        {
+          "commissionPct": "number",
+          "createdBy": "string",
+          "creationDate": "string",
+          "department": "number",
+          "departmentObject": {
+            "count": "number",
+            "hasMore": "boolean",
+            "items": [
+              {
+                "createdBy": "string",
+                "creationDate": "string",
+                "departmentName": "string",
+                "id": "number",
+                "lastUpdateDate": "string",
+                "lastUpdatedBy": "string",
+                "links": [
+                  {
+                    "href": "string",
+                    "kind": "string",
+                    "name": "string",
+                    "properties": {
+                      "changeIndicator": "string"
+                    },
+                    "rel": "string"
+                  }
+                ],
+                "location": "number",
+                "locationObject": {
+                  "count": "number",
+                  "hasMore": "boolean",
+                  "items": [
+                    {
+                      "city": "string",
+                      "country": "number",
+                      "createdBy": "string",
+                      "creationDate": "string",
+                      "id": "number",
+                      "lastUpdateDate": "string",
+                      "lastUpdatedBy": "string",
+                      "links": [
+                        {
+                          "href": "string",
+                          "kind": "string",
+                          "name": "string",
+                          "properties": {
+                            "changeIndicator": "string"
+                          },
+                          "rel": "string"
+                        }
+                      ],
+                      "locationCountry": {
+                        "count": "number",
+                        "hasMore": "boolean",
+                        "items": [
+                          {
+                            "countryCode": "string",
+                            "countryName": "string",
+                            "createdBy": "string",
+                            "creationDate": "string",
+                            "id": "number",
+                            "inRegion": "object",
+                            "lastUpdateDate": "string",
+                            "lastUpdatedBy": "string",
+                            "links": "object[]",
+                            "region": "number"
+                          }
+                        ],
+                        "limit": "number",
+                        "links": [
+                          {
+                            "href": "string",
+                            "kind": "string",
+                            "name": "string",
+                            "properties": "object",
+                            "rel": "string"
+                          }
+                        ],
+                        "offset": "number",
+                        "totalResults": "number"
+                      },
+                      "postalCode": "string",
+                      "stateProvince": "string",
+                      "streetAddress": "string"
+                    }
+                  ],
+                  "limit": "number",
+                  "links": [
+                    {
+                      "href": "string",
+                      "kind": "string",
+                      "name": "string",
+                      "properties": {
+                        "changeIndicator": "string"
+                      },
+                      "rel": "string"
+                    }
+                  ],
+                  "offset": "number",
+                  "totalResults": "number"
+                },
+                "manager": "number",
+                "totalSalary": "number"
+              }
+            ],
+            "limit": "number",
+            "links": [
+              {
+                "href": "string",
+                "kind": "string",
+                "name": "string",
+                "properties": {
+                  "changeIndicator": "string"
+                },
+                "rel": "string"
+              }
+            ],
+            "offset": "number",
+            "totalResults": "number"
+          },
+          "email": "string",
+          "employeeSkillCollection": {
+            "count": "number",
+            "hasMore": "boolean",
+            "items": [
+              {
+                "createdBy": "string",
+                "creationDate": "string",
+                "employee": "number",
+                "id": "number",
+                "lastUpdateDate": "string",
+                "lastUpdatedBy": "string",
+                "links": [
+                  {
+                    "href": "string",
+                    "kind": "string",
+                    "name": "string",
+                    "properties": {
+                      "changeIndicator": "string"
+                    },
+                    "rel": "string"
+                  }
+                ],
+                "skill": "number",
+                "skillObject": {
+                  "count": "number",
+                  "hasMore": "boolean",
+                  "items": [
+                    {
+                      "createdBy": "string",
+                      "creationDate": "string",
+                      "id": "number",
+                      "lastUpdateDate": "string",
+                      "lastUpdatedBy": "string",
+                      "links": [
+                        {
+                          "href": "string",
+                          "kind": "string",
+                          "name": "string",
+                          "properties": {
+                            "changeIndicator": "string"
+                          },
+                          "rel": "string"
+                        }
+                      ],
+                      "name": "string"
+                    }
+                  ],
+                  "limit": "number",
+                  "links": [
+                    {
+                      "href": "string",
+                      "kind": "string",
+                      "name": "string",
+                      "properties": {
+                        "changeIndicator": "string"
+                      },
+                      "rel": "string"
+                    }
+                  ],
+                  "offset": "number",
+                  "totalResults": "number"
+                }
+              }
+            ],
+            "limit": "number",
+            "links": [
+              {
+                "href": "string",
+                "kind": "string",
+                "name": "string",
+                "properties": {
+                  "changeIndicator": "string"
+                },
+                "rel": "string"
+              }
+            ],
+            "offset": "number",
+            "totalResults": "number"
+          },
+          "firstName": "string",
+          "hireDate": "string",
+          "id": "number",
+          "job": "number",
+          "jobObject": {
+            "count": "number",
+            "hasMore": "boolean",
+            "items": [
+              {
+                "createdBy": "string",
+                "creationDate": "string",
+                "id": "number",
+                "jobTitle": "string",
+                "lastUpdateDate": "string",
+                "lastUpdatedBy": "string",
+                "links": [
+                  {
+                    "href": "string",
+                    "kind": "string",
+                    "name": "string",
+                    "properties": {
+                      "changeIndicator": "string"
+                    },
+                    "rel": "string"
+                  }
+                ],
+                "maxSalary": "number",
+                "minSalary": "number"
+              }
+            ],
+            "limit": "number",
+            "links": [
+              {
+                "href": "string",
+                "kind": "string",
+                "name": "string",
+                "properties": {
+                  "changeIndicator": "string"
+                },
+                "rel": "string"
+              }
+            ],
+            "offset": "number",
+            "totalResults": "number"
+          },
+          "lastName": "string",
+          "lastUpdateDate": "string",
+          "lastUpdatedBy": "string",
+          "links": [
+            {
+              "href": "string",
+              "kind": "string",
+              "name": "string",
+              "properties": {
+                "changeIndicator": "string"
+              },
+              "rel": "string"
+            }
+          ],
+          "manager": "number",
+          "managerObject": {
+            "count": "number",
+            "hasMore": "boolean",
+            "items": [
+              {
+                "commissionPct": "number",
+                "createdBy": "string",
+                "creationDate": "string",
+                "department": "number",
+                "email": "string",
+                "firstName": "string",
+                "hireDate": "string",
+                "id": "number",
+                "job": "number",
+                "lastName": "string",
+                "lastUpdateDate": "string",
+                "lastUpdatedBy": "string",
+                "links": [
+                  {
+                    "href": "string",
+                    "kind": "string",
+                    "name": "string",
+                    "properties": {
+                      "changeIndicator": "string"
+                    },
+                    "rel": "string"
+                  }
+                ],
+                "manager": "number",
+                "phoneNumber": "string",
+                "review": "string",
+                "salary": "number"
+              }
+            ],
+            "limit": "number",
+            "links": [
+              {
+                "href": "string",
+                "kind": "string",
+                "name": "string",
+                "properties": {
+                  "changeIndicator": "string"
+                },
+                "rel": "string"
+              }
+            ],
+            "offset": "number",
+            "totalResults": "number"
+          },
+          "phoneNumber": "string",
+          "review": "string",
+          "salary": "number",
+          "skillCollection": {
+            "count": "number",
+            "hasMore": "boolean",
+            "items": [
+              {
+                "createdBy": "string",
+                "creationDate": "string",
+                "employeeSkillCollection": {
+                  "count": "number",
+                  "hasMore": "boolean",
+                  "items": [
+                    {
+                      "createdBy": "string",
+                      "creationDate": "string",
+                      "employee": "number",
+                      "id": "number",
+                      "lastUpdateDate": "string",
+                      "lastUpdatedBy": "string",
+                      "links": [
+                        {
+                          "href": "string",
+                          "kind": "string",
+                          "name": "string",
+                          "properties": {
+                            "changeIndicator": "string"
+                          },
+                          "rel": "string"
+                        }
+                      ],
+                      "skill": "number",
+                      "skillObject": {
+                        "count": "number",
+                        "hasMore": "boolean",
+                        "items": [
+                          {
+                            "createdBy": "string",
+                            "creationDate": "string",
+                            "id": "number",
+                            "lastUpdateDate": "string",
+                            "lastUpdatedBy": "string",
+                            "links": "object[]",
+                            "name": "string"
+                          }
+                        ],
+                        "limit": "number",
+                        "links": [
+                          {
+                            "href": "string",
+                            "kind": "string",
+                            "name": "string",
+                            "properties": "object",
+                            "rel": "string"
+                          }
+                        ],
+                        "offset": "number",
+                        "totalResults": "number"
+                      }
+                    }
+                  ],
+                  "limit": "number",
+                  "links": [
+                    {
+                      "href": "string",
+                      "kind": "string",
+                      "name": "string",
+                      "properties": {
+                        "changeIndicator": "string"
+                      },
+                      "rel": "string"
+                    }
+                  ],
+                  "offset": "number",
+                  "totalResults": "number"
+                },
+                "id": "number",
+                "lastUpdateDate": "string",
+                "lastUpdatedBy": "string",
+                "links": [
+                  {
+                    "href": "string",
+                    "kind": "string",
+                    "name": "string",
+                    "properties": {
+                      "changeIndicator": "string"
+                    },
+                    "rel": "string"
+                  }
+                ],
+                "name": "string"
+              }
+            ],
+            "limit": "number",
+            "links": [
+              {
+                "href": "string",
+                "kind": "string",
+                "name": "string",
+                "properties": {
+                  "changeIndicator": "string"
+                },
+                "rel": "string"
+              }
+            ],
+            "offset": "number",
+            "totalResults": "number"
+          }
+        }
+      ]
+    },
+    "getall_Employee2": {
+      "items": [
+        {
+          "commissionPct": "number",
+          "createdBy": "string",
+          "creationDate": "string",
+          "department": "number",
+          "departmentObject": {
+            "count": "number",
+            "hasMore": "boolean",
+            "items": [
+              {
+                "createdBy": "string",
+                "creationDate": "string",
+                "departmentName": "string",
+                "id": "number",
+                "lastUpdateDate": "string",
+                "lastUpdatedBy": "string",
+                "links": [
+                  {
+                    "href": "string",
+                    "kind": "string",
+                    "name": "string",
+                    "properties": {
+                      "changeIndicator": "string"
+                    },
+                    "rel": "string"
+                  }
+                ],
+                "location": "number",
+                "locationObject": {
+                  "count": "number",
+                  "hasMore": "boolean",
+                  "items": [
+                    {
+                      "city": "string",
+                      "country": "number",
+                      "createdBy": "string",
+                      "creationDate": "string",
+                      "id": "number",
+                      "lastUpdateDate": "string",
+                      "lastUpdatedBy": "string",
+                      "links": [
+                        {
+                          "href": "string",
+                          "kind": "string",
+                          "name": "string",
+                          "properties": {
+                            "changeIndicator": "string"
+                          },
+                          "rel": "string"
+                        }
+                      ],
+                      "locationCountry": {
+                        "count": "number",
+                        "hasMore": "boolean",
+                        "items": [
+                          {
+                            "countryCode": "string",
+                            "countryName": "string",
+                            "createdBy": "string",
+                            "creationDate": "string",
+                            "id": "number",
+                            "inRegion": "object",
+                            "lastUpdateDate": "string",
+                            "lastUpdatedBy": "string",
+                            "links": "object[]",
+                            "region": "number"
+                          }
+                        ],
+                        "limit": "number",
+                        "links": [
+                          {
+                            "href": "string",
+                            "kind": "string",
+                            "name": "string",
+                            "properties": "object",
+                            "rel": "string"
+                          }
+                        ],
+                        "offset": "number",
+                        "totalResults": "number"
+                      },
+                      "postalCode": "string",
+                      "stateProvince": "string",
+                      "streetAddress": "string"
+                    }
+                  ],
+                  "limit": "number",
+                  "links": [
+                    {
+                      "href": "string",
+                      "kind": "string",
+                      "name": "string",
+                      "properties": {
+                        "changeIndicator": "string"
+                      },
+                      "rel": "string"
+                    }
+                  ],
+                  "offset": "number",
+                  "totalResults": "number"
+                },
+                "manager": "number",
+                "totalSalary": "number"
+              }
+            ],
+            "limit": "number",
+            "links": [
+              {
+                "href": "string",
+                "kind": "string",
+                "name": "string",
+                "properties": {
+                  "changeIndicator": "string"
+                },
+                "rel": "string"
+              }
+            ],
+            "offset": "number",
+            "totalResults": "number"
+          },
+          "email": "string",
+          "employeeSkillCollection": {
+            "count": "number",
+            "hasMore": "boolean",
+            "items": [
+              {
+                "createdBy": "string",
+                "creationDate": "string",
+                "employee": "number",
+                "id": "number",
+                "lastUpdateDate": "string",
+                "lastUpdatedBy": "string",
+                "links": [
+                  {
+                    "href": "string",
+                    "kind": "string",
+                    "name": "string",
+                    "properties": {
+                      "changeIndicator": "string"
+                    },
+                    "rel": "string"
+                  }
+                ],
+                "skill": "number",
+                "skillObject": {
+                  "count": "number",
+                  "hasMore": "boolean",
+                  "items": [
+                    {
+                      "createdBy": "string",
+                      "creationDate": "string",
+                      "id": "number",
+                      "lastUpdateDate": "string",
+                      "lastUpdatedBy": "string",
+                      "links": [
+                        {
+                          "href": "string",
+                          "kind": "string",
+                          "name": "string",
+                          "properties": {
+                            "changeIndicator": "string"
+                          },
+                          "rel": "string"
+                        }
+                      ],
+                      "name": "string"
+                    }
+                  ],
+                  "limit": "number",
+                  "links": [
+                    {
+                      "href": "string",
+                      "kind": "string",
+                      "name": "string",
+                      "properties": {
+                        "changeIndicator": "string"
+                      },
+                      "rel": "string"
+                    }
+                  ],
+                  "offset": "number",
+                  "totalResults": "number"
+                }
+              }
+            ],
+            "limit": "number",
+            "links": [
+              {
+                "href": "string",
+                "kind": "string",
+                "name": "string",
+                "properties": {
+                  "changeIndicator": "string"
+                },
+                "rel": "string"
+              }
+            ],
+            "offset": "number",
+            "totalResults": "number"
+          },
+          "firstName": "string",
+          "hireDate": "string",
+          "id": "number",
+          "job": "number",
+          "jobObject": {
+            "count": "number",
+            "hasMore": "boolean",
+            "items": [
+              {
+                "createdBy": "string",
+                "creationDate": "string",
+                "id": "number",
+                "jobTitle": "string",
+                "lastUpdateDate": "string",
+                "lastUpdatedBy": "string",
+                "links": [
+                  {
+                    "href": "string",
+                    "kind": "string",
+                    "name": "string",
+                    "properties": {
+                      "changeIndicator": "string"
+                    },
+                    "rel": "string"
+                  }
+                ],
+                "maxSalary": "number",
+                "minSalary": "number"
+              }
+            ],
+            "limit": "number",
+            "links": [
+              {
+                "href": "string",
+                "kind": "string",
+                "name": "string",
+                "properties": {
+                  "changeIndicator": "string"
+                },
+                "rel": "string"
+              }
+            ],
+            "offset": "number",
+            "totalResults": "number"
+          },
+          "lastName": "string",
+          "lastUpdateDate": "string",
+          "lastUpdatedBy": "string",
+          "links": [
+            {
+              "href": "string",
+              "kind": "string",
+              "name": "string",
+              "properties": {
+                "changeIndicator": "string"
+              },
+              "rel": "string"
+            }
+          ],
+          "manager": "number",
+          "managerObject": {
+            "count": "number",
+            "hasMore": "boolean",
+            "items": [
+              {
+                "commissionPct": "number",
+                "createdBy": "string",
+                "creationDate": "string",
+                "department": "number",
+                "email": "string",
+                "firstName": "string",
+                "hireDate": "string",
+                "id": "number",
+                "job": "number",
+                "lastName": "string",
+                "lastUpdateDate": "string",
+                "lastUpdatedBy": "string",
+                "links": [
+                  {
+                    "href": "string",
+                    "kind": "string",
+                    "name": "string",
+                    "properties": {
+                      "changeIndicator": "string"
+                    },
+                    "rel": "string"
+                  }
+                ],
+                "manager": "number",
+                "phoneNumber": "string",
+                "review": "string",
+                "salary": "number"
+              }
+            ],
+            "limit": "number",
+            "links": [
+              {
+                "href": "string",
+                "kind": "string",
+                "name": "string",
+                "properties": {
+                  "changeIndicator": "string"
+                },
+                "rel": "string"
+              }
+            ],
+            "offset": "number",
+            "totalResults": "number"
+          },
+          "phoneNumber": "string",
+          "review": "string",
+          "salary": "number",
+          "skillCollection": {
+            "count": "number",
+            "hasMore": "boolean",
+            "items": [
+              {
+                "createdBy": "string",
+                "creationDate": "string",
+                "employeeSkillCollection": {
+                  "count": "number",
+                  "hasMore": "boolean",
+                  "items": [
+                    {
+                      "createdBy": "string",
+                      "creationDate": "string",
+                      "employee": "number",
+                      "id": "number",
+                      "lastUpdateDate": "string",
+                      "lastUpdatedBy": "string",
+                      "links": [
+                        {
+                          "href": "string",
+                          "kind": "string",
+                          "name": "string",
+                          "properties": {
+                            "changeIndicator": "string"
+                          },
+                          "rel": "string"
+                        }
+                      ],
+                      "skill": "number",
+                      "skillObject": {
+                        "count": "number",
+                        "hasMore": "boolean",
+                        "items": [
+                          {
+                            "createdBy": "string",
+                            "creationDate": "string",
+                            "id": "number",
+                            "lastUpdateDate": "string",
+                            "lastUpdatedBy": "string",
+                            "links": "object[]",
+                            "name": "string"
+                          }
+                        ],
+                        "limit": "number",
+                        "links": [
+                          {
+                            "href": "string",
+                            "kind": "string",
+                            "name": "string",
+                            "properties": "object",
+                            "rel": "string"
+                          }
+                        ],
+                        "offset": "number",
+                        "totalResults": "number"
+                      }
+                    }
+                  ],
+                  "limit": "number",
+                  "links": [
+                    {
+                      "href": "string",
+                      "kind": "string",
+                      "name": "string",
+                      "properties": {
+                        "changeIndicator": "string"
+                      },
+                      "rel": "string"
+                    }
+                  ],
+                  "offset": "number",
+                  "totalResults": "number"
+                },
+                "id": "number",
+                "lastUpdateDate": "string",
+                "lastUpdatedBy": "string",
+                "links": [
+                  {
+                    "href": "string",
+                    "kind": "string",
+                    "name": "string",
+                    "properties": {
+                      "changeIndicator": "string"
+                    },
+                    "rel": "string"
+                  }
+                ],
+                "name": "string"
+              }
+            ],
+            "limit": "number",
+            "links": [
+              {
+                "href": "string",
+                "kind": "string",
+                "name": "string",
+                "properties": {
+                  "changeIndicator": "string"
+                },
+                "rel": "string"
+              }
+            ],
+            "offset": "number",
+            "totalResults": "number"
+          }
+        }
+      ]
+    }
+  },
+  "eventListeners": {
+    "toggleDrawer": {
+      "chains": [
+        {
+          "chain": "application:toggleDrawerHandler"
+        }
+      ]
+    }
+  },
+  "imports": {
+    "components": {
+      "oj-button": {
+        "path": "ojs/ojbutton"
+      },
+      "oj-input-text": {
+        "path": "ojs/ojinputtext"
+      },
+      "oj-select-single": {
+        "path": "ojs/ojselectsingle"
+      }
+    }
+  }
+}

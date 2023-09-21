@@ -1,0 +1,25 @@
+<div class="oj-flex">
+  <h1 class="oj-flex-item oj-sm-12 oj-md-12">Create Employee</h1>
+</div>
+<div class="oj-flex">
+  <oj-validation-group id="validation-group" class="oj-flex-item oj-sm-12 oj-md-12">
+    <oj-form-layout class="oj-formlayout-full-width" label-edge="start">
+      <oj-input-text value="{{ $variables.employee.email }}" label-hint="Email" virtual-keyboard="email"
+        validators='[{"type":"regexp", "options":{"pattern":"([a-zA-Z0-9_\\-\\.]+)@([a-zA-Z0-9_\\-\\.]+)\\.([a-zA-Z]{2,5})", "hint":"Enter an email address.", "messageDetail": "Value must be of the form xxx@xxx.xx"}}]'
+        disabled="true"></oj-input-text>
+      <oj-input-text value="{{ $variables.employee.firstName }}" label-hint="First Name" required="true"></oj-input-text>
+      <oj-input-date value="{{ $variables.employee.hireDate }}" label-hint="Hire date" required="true"></oj-input-date>
+      <oj-select-single value="{{ $variables.employee.job }}" label-hint="Job" required="true"
+        data="[[ $variables.jobListSDP ]]" item-text="jobTitle"></oj-select-single>
+      <oj-input-text value="{{ $variables.employee.lastName }}" label-hint="Last Name" required="true"></oj-input-text>
+      <oj-input-number value="{{ $variables.employee.salary }}" label-hint="Salary" min="0"></oj-input-number>
+    </oj-form-layout>
+  </oj-validation-group>
+</div>
+<div class="oj-flex">
+  <oj-toolbar chroming="solid" class="oj-flex-item oj-sm-12 oj-md-12">
+    <oj-button on-oj-action="[[$listeners.backButtonClicked]]">Cancel</oj-button>
+    <oj-button on-oj-action="[[$listeners.saveButtonClicked]]"
+      disabled="[[ $variables.createEmployeeChainInProgress ]]">Save</oj-button>
+  </oj-toolbar>
+</div>

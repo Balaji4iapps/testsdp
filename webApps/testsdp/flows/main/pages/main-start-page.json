@@ -1,0 +1,238 @@
+{
+  "title": "main",
+  "description": "",
+  "variables": {
+    "doc_Gen_sdp": {
+      "type": "vb/ServiceDataProvider",
+      "defaultValue": {
+
+        "responseType": "getDoctorNamewithgenderlov",
+        "itemsPath": "items",
+        "keyAttributes": "doc_gender",
+        "transformsContext": {
+          "vb-textFilterAttributes": [
+            "doc_gender"
+          ]
+        },
+        "fetchChain": "getDoctorNamewithgenderlovFetch"
+      }
+    },
+    "Doc_name_sdp": {
+      "type": "vb/ServiceDataProvider",
+      "defaultValue": {
+        "responseType": "getDoctorDocnamelov",
+        "itemsPath": "items",
+        "keyAttributes": "doc_name",
+        "transformsContext": {
+          "vb-textFilterAttributes": [
+            "doc_name"
+          ]
+        },
+        "fetchChain": "getDoctorDocnamelovFetch"
+      }
+    },
+    "gender": {
+      "type": "string"
+    },
+    "getDoctorDocnamelovListSDP": {
+      "type": "vb/ServiceDataProvider",
+      "defaultValue": {
+        "keyAttributes": "doc_name",
+        "itemsPath": "items",
+        "responseType": "getDoctorDocnamelovResponse",
+        "transformsContext": {
+          "vb-textFilterAttributes": [
+            "doc_name"
+          ]
+        },
+        "fetchChain": "getDoctorDocnamelovFetch2"
+      }
+    },
+    "getDoctorDocnamelovListSDP2": {
+      "type": "vb/ServiceDataProvider",
+      "defaultValue": {
+        "keyAttributes": "doc_name",
+        "itemsPath": "items",
+        "responseType": "getDoctorDocnamelovResponse2",
+        "transformsContext": {
+          "vb-textFilterAttributes": [
+            "doc_name"
+          ]
+        },
+        "fetchChain": "getDoctorDocnamelovFetch3"
+      }
+    },
+    "getDoctorNamewithgenderlovListSDP": {
+      "type": "vb/ServiceDataProvider",
+      "defaultValue": {
+        "keyAttributes": "doc_gender",
+        "itemsPath": "items",
+        "responseType": "getDoctorNamewithgenderlovResponse",
+        "transformsContext": {
+          "vb-textFilterAttributes": [
+            "doc_gender"
+          ]
+        },
+        "fetchChain": "getDoctorNamewithgenderlovFetch2"
+      }
+    },
+    "getDoctorNamewithgenderlovListSDP2": {
+      "type": "vb/ServiceDataProvider",
+      "defaultValue": {
+        "keyAttributes": "doc_gender",
+        "itemsPath": "items",
+        "responseType": "getDoctorNamewithgenderlovResponse2",
+        "transformsContext": {
+          "vb-textFilterAttributes": [
+            "doc_gender"
+          ]
+        },
+        "fetchChain": "getDoctorNamewithgenderlovFetch3"
+      }
+    },
+    "Name": {
+      "type": "string"
+    }
+
+  },
+  "metadata": {},
+  "types": {
+    "@decorators.getDoctorDocnamelov": {
+      "endpoint": "getDoctorDocnamelov",
+      "service": "hospitalmang",
+      "path": "response"
+    },
+    "@decorators.getDoctorDocnamelovResponse": {
+      "endpoint": "getDoctorDocnamelov",
+      "service": "hospitalmang",
+      "path": "response"
+    },
+    "@decorators.getDoctorDocnamelovResponse2": {
+      "endpoint": "getDoctorDocnamelov",
+      "service": "hospitalmang",
+      "path": "response"
+    },
+    "@decorators.getDoctorNamewithgenderlov": {
+      "endpoint": "getDoctorNamewithgenderlov",
+      "service": "hospitalmang",
+      "path": "response"
+    },
+    "@decorators.getDoctorNamewithgenderlovResponse": {
+      "endpoint": "getDoctorNamewithgenderlov",
+      "service": "hospitalmang",
+      "path": "response"
+    },
+    "@decorators.getDoctorNamewithgenderlovResponse2": {
+      "endpoint": "getDoctorNamewithgenderlov",
+      "service": "hospitalmang",
+      "path": "response"
+    },
+    "getDoctorDocnamelov": {
+      "items": [
+        {
+          "doc_address": "string",
+          "doc_code": "number",
+          "doc_designation": "string",
+          "doc_fees": "number",
+          "doc_gender": "string",
+          "doc_name": "string",
+          "doc_number": "any",
+          "medical_fees": "number",
+          "total_fees": "number"
+        }
+      ]
+    },
+    "getDoctorDocnamelovResponse": {
+      "items": [
+        {
+          "doc_name": "string"
+        }
+      ]
+    },
+    "getDoctorDocnamelovResponse2": {
+      "items": [
+        {
+          "doc_name": "string"
+        }
+      ]
+    },
+    "getDoctorNamewithgenderlov": {
+      "items": [
+        {
+          "doc_address": "string",
+          "doc_code": "number",
+          "doc_designation": "string",
+          "doc_fees": "any",
+          "doc_gender": "string",
+          "doc_name": "string",
+          "doc_number": "any",
+          "medical_fees": "any",
+          "total_fees": "any"
+        }
+      ]
+    },
+    "getDoctorNamewithgenderlovResponse": {
+      "items": [
+        {
+          "doc_gender": "string"
+        }
+      ]
+    },
+    "getDoctorNamewithgenderlovResponse2": {
+      "items": [
+        {
+          "doc_gender": "string"
+        }
+      ]
+    }
+  },
+  "eventListeners": {
+    "comboValue": {
+      "chains": [
+        {
+          "chain": "ComboValueChangeChain",
+          "parameters": {
+            "value": "{{ $event.detail.value }}"
+          }
+        }
+      ]
+    },
+    "selectValueItem": {
+      "chains": [
+        {
+          "chain": "SelectValueItemChangeChain1",
+          "parameters": {
+            "key": "{{$event.detail.value.key}}",
+            "data": "{{$event.detail.value.data}}",
+            "metadata": "{{$event.detail.value.metadata}}"
+          }
+        }
+      ]
+    },
+    "toggleDrawer": {
+      "chains": [
+        {
+          "chain": "application:toggleDrawerHandler"
+        }
+      ]
+    }
+
+  },
+  "imports": {
+    "components": {
+      "oj-button": {
+        "path": "ojs/ojbutton"
+      },
+      "oj-combobox-many": {
+        "path": "ojs/ojselectcombobox"
+      },
+      "oj-combobox-one": {
+        "path": "ojs/ojselectcombobox"
+      },
+      "oj-select-single": {
+        "path": "ojs/ojselectsingle"
+      }
+
+    }
+  }
+}

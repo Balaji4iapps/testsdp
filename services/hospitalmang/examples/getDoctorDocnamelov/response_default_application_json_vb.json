@@ -1,0 +1,29 @@
+{
+    "items": [
+        {
+            "doc_code": 1240,
+            "doc_name": "Anaya Alvi",
+            "doc_gender": "MALE",
+            "doc_address": "test2",
+            "doc_designation": "doc1",
+            "doc_number": null,
+            "doc_fees": 100,
+            "medical_fees": 50,
+            "total_fees": 150
+        }
+    ],
+    "hasMore": false,
+    "limit": 0,
+    "offset": 0,
+    "count": 1,
+    "links": [
+        {
+            "rel": "self",
+            "href": "https://gd4d01c5ed5180a-dyrdbtestadw.adb.me-dubai-1.oraclecloudapps.com/ords/dyrords/1310/doctor/docnamelov?searchvalue=Anaya+Alvi"
+        },
+        {
+            "rel": "describedby",
+            "href": "https://gd4d01c5ed5180a-dyrdbtestadw.adb.me-dubai-1.oraclecloudapps.com/ords/dyrords/metadata-catalog/1310/doctor/item"
+        }
+    ]
+}

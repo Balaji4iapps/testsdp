@@ -1,0 +1,90 @@
+{
+    "items": [
+        {
+            "doc_code": 1240,
+            "doc_name": "Anaya Alvi",
+            "doc_gender": "MALE",
+            "doc_address": "test2",
+            "doc_designation": "doc1",
+            "doc_number": null,
+            "doc_fees": 100,
+            "medical_fees": 50,
+            "total_fees": 150,
+            "rownum": 1
+        },
+        {
+            "doc_code": 1314,
+            "doc_name": "doc",
+            "doc_gender": "M",
+            "doc_address": "new123",
+            "doc_designation": "newdoc",
+            "doc_number": null,
+            "doc_fees": null,
+            "medical_fees": null,
+            "total_fees": null,
+            "rownum": 2
+        },
+        {
+            "doc_code": 1313,
+            "doc_name": "doc2",
+            "doc_gender": "M",
+            "doc_address": "new123",
+            "doc_designation": "newdoc",
+            "doc_number": null,
+            "doc_fees": null,
+            "medical_fees": null,
+            "total_fees": null,
+            "rownum": 3
+        },
+        {
+            "doc_code": 1312,
+            "doc_name": "new",
+            "doc_gender": "M",
+            "doc_address": "new123",
+            "doc_designation": "newdoc",
+            "doc_number": null,
+            "doc_fees": null,
+            "medical_fees": null,
+            "total_fees": null,
+            "rownum": 4
+        },
+        {
+            "doc_code": 1311,
+            "doc_name": "new2",
+            "doc_gender": "M",
+            "doc_address": "new123",
+            "doc_designation": "newdoc",
+            "doc_number": null,
+            "doc_fees": null,
+            "medical_fees": null,
+            "total_fees": null,
+            "rownum": 5
+        },
+        {
+            "doc_code": 1310,
+            "doc_name": "new3",
+            "doc_gender": "F",
+            "doc_address": "new123",
+            "doc_designation": "newdoc",
+            "doc_number": null,
+            "doc_fees": null,
+            "medical_fees": null,
+            "total_fees": null,
+            "rownum": 6
+        }
+    ],
+    "hasMore": false,
+    "limit": 0,
+    "offset": 0,
+    "count": 6,
+    "links": [
+        {
+            "rel": "self",
+            "href": "https://gd4d01c5ed5180a-dyrdbtestadw.adb.me-dubai-1.oraclecloudapps.com/ords/dyrords/1310/doctordetails"
+        },
+        {
+            "rel": "describedby",
+            "href": "https://gd4d01c5ed5180a-dyrdbtestadw.adb.me-dubai-1.oraclecloudapps.com/ords/dyrords/metadata-catalog/1310/item"
+        }
+    ]
+}

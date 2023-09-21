@@ -1,0 +1,325 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "title": "Ords Dyrords",
+        "version": "1.0.0"
+    },
+    "servers": [
+        {
+            "url": "vb-catalog://backends/hospitalmanagment"
+        }
+    ],
+    "paths": {
+        "/doctordetails": {
+            "get": {
+                "operationId": "getDoctordetails",
+                "responses": {
+                    "default": {
+                        "description": "Response for default",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/GetDoctordetails"
+                                },
+                                "examples": {
+                                    "vb": {
+                                        "summary": "Example stored by VB User",
+                                        "externalValue": "./examples/getDoctordetails/response_default_application_json_vb.json"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "x-vb": {
+                    "actionHint": "getMany"
+                }
+            }
+        },
+        "/doctor/docnamelov": {
+            "get": {
+                "operationId": "getDoctorDocnamelov",
+                "parameters": [
+                    {
+                        "name": "searchvalue",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "default": {
+                        "description": "Response for default",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/GetDoctorDocnamelov"
+                                },
+                                "examples": {
+                                    "vb": {
+                                        "summary": "Example stored by VB User",
+                                        "externalValue": "./examples/getDoctorDocnamelov/response_default_application_json_vb.json"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "x-vb": {
+                    "actionHint": "getMany"
+                }
+            }
+        },
+        "/doctor/namewithgenderlov": {
+            "get": {
+                "operationId": "getDoctorNamewithgenderlov",
+                "parameters": [
+                    {
+                        "name": "P_DOC_NAME",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "searchvalue",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "default": {
+                        "description": "Response for default",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/GetDoctorNamewithgenderlov"
+                                },
+                                "examples": {
+                                    "vb": {
+                                        "summary": "Example stored by VB User",
+                                        "externalValue": "./examples/getDoctorNamewithgenderlov/response_default_application_json_vb.json"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "x-vb": {
+                    "actionHint": "getMany"
+                }
+            }
+        }
+    },
+    "components": {
+        "schemas": {
+            "GetDoctordetails": {
+                "type": "object",
+                "properties": {
+                    "items": {
+                        "type": "array",
+                        "items": {
+                            "type": "object",
+                            "properties": {
+                                "doc_code": {
+                                    "type": "integer"
+                                },
+                                "doc_name": {
+                                    "type": "string"
+                                },
+                                "doc_gender": {
+                                    "type": "string"
+                                },
+                                "doc_address": {
+                                    "type": "string"
+                                },
+                                "doc_designation": {
+                                    "type": "string"
+                                },
+                                "doc_number": {
+                                    "nullable": true
+                                },
+                                "doc_fees": {
+                                    "type": "integer",
+                                    "nullable": true
+                                },
+                                "medical_fees": {
+                                    "type": "integer",
+                                    "nullable": true
+                                },
+                                "total_fees": {
+                                    "type": "integer",
+                                    "nullable": true
+                                },
+                                "rownum": {
+                                    "type": "integer"
+                                }
+                            }
+                        }
+                    },
+                    "hasMore": {
+                        "type": "boolean"
+                    },
+                    "limit": {
+                        "type": "integer"
+                    },
+                    "offset": {
+                        "type": "integer"
+                    },
+                    "count": {
+                        "type": "integer"
+                    },
+                    "links": {
+                        "type": "array",
+                        "items": {
+                            "type": "object",
+                            "properties": {
+                                "rel": {
+                                    "type": "string"
+                                },
+                                "href": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "GetDoctorDocnamelov": {
+                "type": "object",
+                "properties": {
+                    "items": {
+                        "type": "array",
+                        "items": {
+                            "type": "object",
+                            "properties": {
+                                "doc_code": {
+                                    "type": "integer"
+                                },
+                                "doc_name": {
+                                    "type": "string"
+                                },
+                                "doc_gender": {
+                                    "type": "string"
+                                },
+                                "doc_address": {
+                                    "type": "string"
+                                },
+                                "doc_designation": {
+                                    "type": "string"
+                                },
+                                "doc_number": {
+                                    "nullable": true
+                                },
+                                "doc_fees": {
+                                    "type": "integer"
+                                },
+                                "medical_fees": {
+                                    "type": "integer"
+                                },
+                                "total_fees": {
+                                    "type": "integer"
+                                }
+                            }
+                        }
+                    },
+                    "hasMore": {
+                        "type": "boolean"
+                    },
+                    "limit": {
+                        "type": "integer"
+                    },
+                    "offset": {
+                        "type": "integer"
+                    },
+                    "count": {
+                        "type": "integer"
+                    },
+                    "links": {
+                        "type": "array",
+                        "items": {
+                            "type": "object",
+                            "properties": {
+                                "rel": {
+                                    "type": "string"
+                                },
+                                "href": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "GetDoctorNamewithgenderlov": {
+                "type": "object",
+                "properties": {
+                    "items": {
+                        "type": "array",
+                        "items": {
+                            "type": "object",
+                            "properties": {
+                                "doc_code": {
+                                    "type": "integer"
+                                },
+                                "doc_name": {
+                                    "type": "string"
+                                },
+                                "doc_gender": {
+                                    "type": "string"
+                                },
+                                "doc_address": {
+                                    "type": "string"
+                                },
+                                "doc_designation": {
+                                    "type": "string"
+                                },
+                                "doc_number": {
+                                    "nullable": true
+                                },
+                                "doc_fees": {
+                                    "nullable": true
+                                },
+                                "medical_fees": {
+                                    "nullable": true
+                                },
+                                "total_fees": {
+                                    "nullable": true
+                                }
+                            }
+                        }
+                    },
+                    "hasMore": {
+                        "type": "boolean"
+                    },
+                    "limit": {
+                        "type": "integer"
+                    },
+                    "offset": {
+                        "type": "integer"
+                    },
+                    "count": {
+                        "type": "integer"
+                    },
+                    "links": {
+                        "type": "array",
+                        "items": {
+                            "type": "object",
+                            "properties": {
+                                "rel": {
+                                    "type": "string"
+                                },
+                                "href": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
